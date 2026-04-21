@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة المتوسط الحديثة | لاستيراد الآلات والمعدات الثقيلة</title>
+    
+    <!-- خطوط جوجل (Cairo) للحصول على خط عربي عصري -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- إطار عمل Tailwind CSS للتصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1E3A8A', /* أزرق داكن (ثقة، احترافية) */
+                        secondary: '#F59E0B', /* أصفر ذهبي (آلات ثقيلة، بناء) */
+                        dark: '#111827',
+                        light: '#F3F4F6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* تأثيرات إضافية بسيطة */
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 selection:bg-secondary selection:text-white">
+
+    <!-- شريط الملاحة (Navbar) -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- الشعار -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-primary text-secondary rounded-lg flex items-center justify-center text-2xl shadow-lg">
+                        <i class="fa-solid fa-truck-monster"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary leading-none">المتوسط الحديثة</h1>
+                        <span class="text-xs text-gray-500 font-semibold">للمعدات والآلات الثقيلة</span>
+                    </div>
+                </div>
+                
+                <!-- الروابط (تختفي في الشاشات الصغيرة جداً) -->
+                <nav class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="text-gray-700 hover:text-secondary font-semibold transition">الرئيسية</a>
+                    <a href="#about" class="text-gray-700 hover:text-secondary font-semibold transition">من نحن</a>
+                    <a href="#vision-goals" class="text-gray-700 hover:text-secondary font-semibold transition">رؤيتنا وأهدافنا</a>
+                    <a href="#services" class="text-gray-700 hover:text-secondary font-semibold transition">خدماتنا</a>
+                </nav>
+
+                <!-- زر الاتصال -->
+               
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي (Hero Section) -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center mt-10">
+        <div class="container mx-auto px-4 z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-secondary text-white font-bold text-sm mb-4 animate-bounce">
+                مقرنا: طرابلس، ليبيا
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                الخيار الأول لاستيراد <br>
+                <br>
+                <span class="text-secondary">الآلات والمعدات الثقيلة</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                نقدم أفضل الحلول الصناعية وقطع الغيار الأصلية بأعلى معايير الجودة العالمية لتلبية احتياجات السوق الليبي ودعم مشاريع البنية التحتية.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#about" class="bg-secondary hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full transition shadow-lg text-lg">
+                    اكتشف المزيد عنا
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-full transition shadow-lg text-lg">
+                    تواصل معنا الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- نبذة عن الشركة -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="1.jpg" alt="معدات ثقيلة" class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-2xl shadow-xl hidden md:block">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h4 class="text-secondary font-bold text-lg mb-2">من نحن</h4>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-primary mb-6">شركة المتوسط الحديثة</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                        نحن شركة ليبية رائدة متخصصة في استيراد وتوريد الآلات والمعدات الثقيلة، ومستلزماتها، وقطع الغيار الأصلية. تأسست الشركة بهدف تلبية الطلب المتزايد في قطاعات البناء، الصناعة، والزراعة في ليبيا.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                        بفضل شبكة علاقاتنا الواسعة مع كبرى المصانع والشركات العالمية، نضمن لعملائنا الحصول على معدات ذات كفاءة عالية، وعمر افتراضي طويل، مع الالتزام التام بتقديم خدمات ما بعد البيع المتميزة.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-primary text-xl">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="font-bold text-gray-800">موثوقية وجودة لا تُضاهى</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الرؤية والأهداف -->
+    <section id="vision-goals" class="py-20 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h4 class="text-secondary font-bold text-lg mb-2">طموحاتنا</h4>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-primary">رؤيتنا وأهدافنا</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- الرؤية -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg card-hover border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-primary text-3xl mb-6">
+                        <i class="fa-regular fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">رؤية الشركة</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        أن نكون الخيار الأول والشركة الأبرز في ليبيا وشمال أفريقيا في تقديم الحلول المتكاملة للمعدات والآلات الثقيلة، وأن نكون شركاء حقيقيين في مسيرة التنمية والإعمار من خلال توفير أحدث التقنيات والمعدات العالمية للسوق المحلي.
+                    </p>
+                </div>
+
+                <!-- الأهداف -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg card-hover border-t-4 border-secondary">
+                    <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center text-secondary text-3xl mb-6">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">أهداف الشركة</h3>
+                    <ul class="space-y-4 text-gray-600 text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-secondary mt-1.5"></i>
+                            <span>توفير أحدث الآلات والمعدات الثقيلة ذات الجودة والاعتمادية العالية.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-secondary mt-1.5"></i>
+                            <span>تأمين قطع الغيار الأصلية لضمان استمرارية عمل الآلات دون توقف.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-secondary mt-1.5"></i>
+                            <span>تقديم أسعار تنافسية تناسب متطلبات السوق الليبي وتدعم المقاولين.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-secondary mt-1.5"></i>
+                            <span>بناء علاقات طويلة الأمد مع عملائنا مبنية على الثقة المتبادلة والشفافية.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الخدمات / ماذا نقدم -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h4 class="text-secondary font-bold text-lg mb-2">ماذا نقدم</h4>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-primary">مجالات تخصصنا</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- خدمة 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center card-hover border border-gray-100">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary text-4xl shadow-md mx-auto mb-6">
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الآلات الثقيلة</h3>
+                    <p class="text-gray-600">
+                        استيراد الحفارات، الجرافات، الرافعات، والمعدات المخصصة للمشاريع الإنشائية الكبرى.
+                    </p>
+                </div>
+                <!-- خدمة 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center card-hover border border-gray-100">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary text-4xl shadow-md mx-auto mb-6">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">قطع الغيار الأصلية</h3>
+                    <p class="text-gray-600">
+                        توفير كافة قطع الغيار الأصلية المضمونة لجميع أنواع المعدات لضمان أفضل أداء.
+                    </p>
+                </div>
+                <!-- خدمة 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center card-hover border border-gray-100">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary text-4xl shadow-md mx-auto mb-6">
+                        <i class="fa-solid fa-oil-can"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">مستلزمات الصيانة</h3>
+                    <p class="text-gray-600">
+                        توريد أفضل أنواع الزيوت، الفلاتر، والمستلزمات الدورية للحفاظ على الآلات.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل والفوتر -->
+    <footer id="contact" class="bg-dark pt-16 pb-8 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 border-b border-gray-700 pb-12">
+                <!-- معلومات الشركة -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-primary text-secondary rounded flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-truck-monster"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">المتوسط الحديثة</h2>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        الشركة الرائدة في استيراد الآلات والمعدات الثقيلة في ليبيا. شريكك الموثوق لبناء المستقبل.
+                    </p>
+                </div>
+
+                <!-- روابط سريعة -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-secondary">روابط هامة</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition"><i class="fa-solid fa-angle-left ml-2 text-primary"></i>الرئيسية</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition"><i class="fa-solid fa-angle-left ml-2 text-primary"></i>من نحن</a></li>
+                        <li><a href="#vision-goals" class="text-gray-400 hover:text-white transition"><i class="fa-solid fa-angle-left ml-2 text-primary"></i>الرؤية والأهداف</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition"><i class="fa-solid fa-angle-left ml-2 text-primary"></i>خدماتنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- معلومات الاتصال -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-secondary">تواصل معنا</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="pt-2">
+                                <p class="font-bold text-white">العنوان:</p>
+                                <p>طرابلس، ليبيا</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="pt-2">
+                                <p class="font-bold text-white">الهاتف:</p>
+                                <p dir="ltr" class="text-right">0913666303</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="pt-2">
+                                <p class="font-bold text-white">ساعات العمل:</p>
+                                <p>السبت - الخميس (08:00 ص - 04:00 م)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- حقوق النشر -->
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; <span id="year"></span> شركة المتوسط الحديثة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // تحديث سنة حقوق النشر تلقائياً
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
